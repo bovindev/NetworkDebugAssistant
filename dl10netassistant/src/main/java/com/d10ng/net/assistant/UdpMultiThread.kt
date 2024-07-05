@@ -53,7 +53,7 @@ class UdpMultiThread constructor(
 
         isRun = true
         var packet: DatagramPacket
-        val by = ByteArray(1024)
+        val by = ByteArray(65535)
         while (isRun) {
             // 循环等待接收
             packet = DatagramPacket(by, by.size)

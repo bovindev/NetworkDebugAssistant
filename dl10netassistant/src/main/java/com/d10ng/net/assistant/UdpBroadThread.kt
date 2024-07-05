@@ -50,7 +50,7 @@ class UdpBroadThread constructor(
 
         isRun = true
         var packet: DatagramPacket
-        val by = ByteArray(1024)
+        val by = ByteArray(65535)// 设置为 UDP 数据包的最大长度
         while (isRun) {
             println("test, ${dgSocket?.isConnected}")
             // 循环等待接收
